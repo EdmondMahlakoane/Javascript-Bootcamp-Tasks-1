@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Bootcamp Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #222;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #2d89ef;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #1b5fb4;
+    }
+    p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Bootcamp Tasks</h1>
+  <p>Click any button below and check the browser console for output.</p>
+
+  <div class="section">
+    <h2>Variables</h2>
+    <button onclick="runVariables()">Run Variables Exercises</button>
+  </div>
+
+  <div class="section">
+    <h2>Data Types & Operators</h2>
+    <button onclick="runDataTypes()">Run Data Type Exercises</button>
+  </div>
+
+  <div class="section">
+    <h2>Conditional Statements & Loops</h2>
+    <button onclick="runConditionals()">Run Conditionals & Loops</button>
+  </div>
+
+  <script>
+    function runVariables() {
+      console.log("=== Variables ===");
+      let name = "Greg";
+      let age = 25;
+      let isStudent = true;
+      console.log(name, age, isStudent);
+
+      let favoriteColour = "Blue";
+      console.log("Favorite Colour:", favoriteColour);
+      favoriteColour = "Red";
+      console.log("New Favourite Colour:", favoriteColour);
+
+      let num1 = 10, num2 = 5;
+      let sum = num1 + num2;
+      let diff = num1 - num2;
+      let product = num1 * num2;
+      let quotient = num1 / num2;
+      console.log("Sum:", sum, "Diff:", diff, "Product:", product, "Quotient:", quotient);
+    }
+
+    function runDataTypes() {
+      console.log("=== Data Types & Operators ===");
+      let intNum = 8;
+      let floatNum = 3.5;
+
+      console.log("Addition:", intNum + floatNum);
+      console.log("Subtraction:", intNum - floatNum);
+      console.log("Multiplication:", intNum * floatNum);
+      console.log("Division:", intNum / floatNum);
+      console.log("Modulus:", intNum % floatNum);
+      console.log("Exponent:", intNum ** 2);
+
+      let x = 8, y = 12;
+      console.log("x > y:", x > y);
+      console.log("x <= y:", x <= y);
+      console.log("x == y:", x == y);
+      console.log("x != y:", x != y);
+
+      let a = true, b = false;
+      console.log("a && b:", a && b);
+      console.log("a || b:", a || b);
+      console.log("!a:", !a);
+
+      let p = 10;
+      p += 5;
+      console.log("p += 5:", p);
+      p -= 2;
+      console.log("p -= 2:", p);
+      p *= 3;
+      console.log("p *= 3:", p);
+      p /= 2;
+      console.log("p /= 2:", p);
+      p %= 4;
+      console.log("p %= 4:", p);
+    }
+
+    function runConditionals() {
+      console.log("=== Conditionals & Loops ===");
+
+      // Temperature Check
+      let temp = 22;
+      if (temp < 0) console.log("It's freezing!");
+      else if (temp <= 15) console.log("It's cold.");
+      else if (temp <= 25) console.log("It's mild.");
+      else console.log("It's warm.");
+
+      // Divisibility
+      let num = 6;
+      if (num % 2 === 0 && num % 3 === 0) console.log("Divisible by both.");
+      else if (num % 2 === 0) console.log("Divisible by 2.");
+      else if (num % 3 === 0) console.log("Divisible by 3.");
+      else console.log("Not divisible by 2 or 3.");
+
+      // For loops
+      console.log("Numbers 1 to 10:");
+      for (let i = 1; i <= 10; i++) console.log(i);
+
+      console.log("Even numbers 1 to 20:");
+      for (let i = 2; i <= 20; i += 2) console.log(i);
+
+      let total = 0;
+      for (let i = 1; i <= 100; i++) total += i;
+      console.log("Sum 1 to 100:", total);
+
+      const numbers1 = [1, 2, 3, 4, 5];
+      numbers1.forEach(num => console.log(num));
+
+      const numbers2 = [3, 7, 2, 5, 10, 6];
+      let max = numbers2[0];
+      for (let i = 1; i < numbers2.length; i++) {
+        if (numbers2[i] > max) max = numbers2[i];
+      }
+      console.log("Max:", max);
+
+      // While loop
+      console.log("While 1 to 10:");
+      let i = 1;
+      while (i <= 10) console.log(i++);
+
+      // Multiples of 5 less than 50
+      console.log("Multiples of 5 under 50:");
+      let m = 5;
+      while (m < 50) {
+        console.log(m);
+        m += 5;
+      }
+
+      // Do while loop 1–10
+      let d = 1;
+      do {
+        console.log(d);
+        d++;
+      } while (d <= 10);
+
+      // Do while sum
+      let sum = 0;
+      let s = 1;
+      do {
+        sum += s;
+        s++;
+      } while (s <= 100);
+      console.log("Do-while sum 1–100:", sum);
+    }
+  </script>
+</body>
+</html>
